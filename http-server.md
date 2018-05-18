@@ -635,7 +635,11 @@ Now that we can retrieve scores from a store it now makes sense to be able to st
 ```go
 func TestStoreWins(t *testing.T) {
 	store := StubPlayerStore{
-		map[string]int{},
+		map[string]int{
+		    	"Pepper": 20,
+		    	"Floyd":  10,
+		},
+		[]string{},
 	}
 	server := &PlayerServer{&store}
 
