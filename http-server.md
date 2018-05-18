@@ -747,6 +747,8 @@ Now extend our test to check the number of invocations for a start
 func TestStoreWins(t *testing.T) {
 	store := StubPlayerStore{
 		map[string]int{},
+		[]string{},
+
 	}
 	server := &PlayerServer{&store}
 
